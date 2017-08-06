@@ -58,6 +58,7 @@ delete [] string;
 string = nullptr;
 return (char*)ft;
 }inline char * BigNumber::ResizeString(char * string){
+Constant::defaultMaxSize*=2;
 char * tmp = new char[Constant::defaultMaxSize];
 void * firsttmp = (void*)tmp;
 void * firststring = (void*)string;
@@ -69,7 +70,6 @@ delete[] string;
 string=nullptr;
 return tmp;
 }inline void BigNumber::ReverseString(char * string){
-Constant::defaultMaxSize*=2;
 char * tmp = new char[Constant::defaultMaxSize];
 void * firsttmp = (void*)tmp;
 void * firststring = (void*)string;
